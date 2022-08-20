@@ -17,9 +17,10 @@ $$ $$
   ![alt text](https://github.com/yahya-bader-khawam/Route-Safety/blob/main/re.png?raw=true)
 
 ## How the Algorithm Works?
+![alt text](https://github.com/yahya-bader-khawam/Route-Safety/blob/main/ra.png?raw=true)
 
 * The algorithm work in this way:
   * Extract elevation data points for a given set of coordinates in a GPX file format, and outputs the angles in degrees for the elevation points to report how much inclined or decline a route path is. 
   * then analyzes each stop in a given route path for the following:
     * determine the nearest location of a stop to the route path.
-    * Then, checks the roads safety (how much inclined or declined a road is at that stop) within some coverage distance to the right and left of a stop address. If any of the angle data points within the coverage distance range of a stop address is is greater than angle_threshold threshold, then going to or oute of that stop address is not considered safe. 
+    * Then, checks the roads safety (how much inclined or declined a road is at that stop) within some coverage distance ```stop_coverage``` to the right and left of a stop address. If any of the angle data points within the coverage distance range of a stop address is is greater than ```angle_threshold``` threshold, then going to or oute of that stop address is not considered safe. 
