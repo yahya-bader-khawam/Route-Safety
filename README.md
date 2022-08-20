@@ -11,3 +11,15 @@
 $$ \theta = {\LARGE \frac{180}{\pi} \ tan^{-1}(\frac{dr_e}{dx})}$$
 
 * where ${\LARGE \frac{180}{\pi}}$ is conversion from randians to degrees, ${\LARGE \frac{dr_e}{dx}}$ is route's elevation derivative with respect to route's distance. Here is an example of route elevation and route angles with respect to the distance of the route:
+
+$$ $$
+
+  ![alt text](https://github.com/yahya-bader-khawam/Route-Safety/blob/main/re.png?raw=true)
+
+## How the Algorithm Works?
+
+* The algorithm work in this way:
+  * Extract elevation data points for a given set of coordinates in a GPX file format, and outputs the angles in degrees for the elevation points to report how much inclined or decline a route path is. 
+  * then analyzes each stop in a given route path for the following:
+    * determine the nearest location of a stop to the route path.
+    * Then, checks the roads safety (how much inclined or declined a road is at that stop) within some coverage distance to the right and left of a stop address. If any of the angle data points within the coverage distance range of a stop address is is greater than angle_threshold threshold, then going to or oute of that stop address is not considered safe. 
