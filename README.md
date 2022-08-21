@@ -8,9 +8,9 @@
 
 * The elevation data points are obtained from the Open Elevation (https://open-elevation.com) by sending a request to its API with coordinates of the route plan (obtained from a GPX file). Here is the equation to calculate the roads angles value (+ve indicate incline, -ve indicate decline, zero angle is flat):
 
-$$ \theta = {\LARGE \frac{180}{\pi} \ tan^{-1}(\frac{dr_e}{dx})}$$
+$$ \theta_i = {\LARGE \frac{180}{\pi} \ tan^{-1}(\frac{de_i}{dx_i})}$$
 
-* where ${\LARGE \frac{180}{\pi}}$ is conversion from randians to degrees, ${\LARGE \frac{dr_e}{dx}}$ is route's elevation derivative with respect to route's distance. Here is an example of route elevation and route angles with respect to the distance of the route:
+* where ${\LARGE \frac{180}{\pi}}$ is conversion from randians to degrees, ${\LARGE \frac{de_i}{dx_i}}$ is route's elevation derivative with respect to route's distance. Here is an example of route elevation and route angles with respect to the distance of the route:
 
 $$ $$
 
